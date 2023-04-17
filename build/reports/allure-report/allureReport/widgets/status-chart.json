@@ -1,0 +1,11 @@
+[ {
+  "uid" : "8370e957ea20bf90",
+  "name" : "succesFillLoginFormTest()",
+  "time" : {
+    "start" : 1681416793114,
+    "stop" : 1681416801464,
+    "duration" : 8350
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

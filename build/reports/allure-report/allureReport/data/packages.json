@@ -1,0 +1,22 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "com.client.AuthorizationFormTest",
+    "children" : [ {
+      "name" : "succesFillLoginFormTest",
+      "uid" : "8370e957ea20bf90",
+      "parentUid" : "b6ae3ddb20fc66607f2aece9157ccb80",
+      "status" : "passed",
+      "time" : {
+        "start" : 1681416793114,
+        "stop" : 1681416801464,
+        "duration" : 8350
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "com.client.AuthorizationFormTest"
+  } ]
+}
