@@ -2,21 +2,21 @@
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
   "name" : "packages",
   "children" : [ {
-    "name" : "com.client.AuthorizationFormTest",
+    "name" : "com.client.tests.AuthorizationFormTest",
     "children" : [ {
       "name" : "succesFillLoginFormTest",
-      "uid" : "8370e957ea20bf90",
-      "parentUid" : "b6ae3ddb20fc66607f2aece9157ccb80",
+      "uid" : "b3af7d9902938676",
+      "parentUid" : "5ab546707535d0152e4c0815f019c3a5",
       "status" : "passed",
       "time" : {
-        "start" : 1681416793114,
-        "stop" : 1681416801464,
-        "duration" : 8350
+        "start" : 1682333186547,
+        "stop" : 1682333194391,
+        "duration" : 7844
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "com.client.AuthorizationFormTest"
+    "uid" : "com.client.tests.AuthorizationFormTest"
   } ]
 }

@@ -1,8 +1,8 @@
 {
   "total" : 1,
   "items" : [ {
-    "uid" : "4f8b3322b3e59a91c9ab8a411b3a7850",
-    "name" : "com.client.AuthorizationFormTest",
+    "uid" : "65234abb3414d52ec67c6f70d1cf5b3a",
+    "name" : "com.client.tests.AuthorizationFormTest",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,

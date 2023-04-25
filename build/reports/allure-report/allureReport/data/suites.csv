@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Apr 13 23:13:13 MSK 2023","Thu Apr 13 23:13:21 MSK 2023","8350","","com.client.AuthorizationFormTest","","com.client.AuthorizationFormTest","succesFillLoginFormTest","succesFillLoginFormTest()",""
+"passed","Mon Apr 24 13:46:26 MSK 2023","Mon Apr 24 13:46:34 MSK 2023","7844","","com.client.tests.AuthorizationFormTest","","com.client.tests.AuthorizationFormTest","succesFillLoginFormTest","succesFillLoginFormTest()",""

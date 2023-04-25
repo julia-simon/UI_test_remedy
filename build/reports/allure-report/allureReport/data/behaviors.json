@@ -3,13 +3,13 @@
   "name" : "behaviors",
   "children" : [ {
     "name" : "succesFillLoginFormTest()",
-    "uid" : "8370e957ea20bf90",
+    "uid" : "b3af7d9902938676",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1681416793114,
-      "stop" : 1681416801464,
-      "duration" : 8350
+      "start" : 1682333186547,
+      "stop" : 1682333194391,
+      "duration" : 7844
     },
     "flaky" : false,
     "newFailed" : false,
