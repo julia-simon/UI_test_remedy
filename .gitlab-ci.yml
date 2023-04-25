@@ -3,7 +3,7 @@ stages:
 
 run autotests dev:
   stage: run_autotests
-  image: alpine
+  image: aerokube/selenoid
   script:
     - echo "dev"
   when: manual
@@ -16,7 +16,7 @@ run autotests dev:
 
 run autotests uat:
   stage: run_autotests
-  image: alpine
+  image: aerokube/selenoid
   script:
     - echo "uat"
   when: manual
@@ -29,7 +29,7 @@ run autotests uat:
 
 run autotests prod:
   stage: run_autotests
-  image: alpine
+  image: aerokube/selenoid
   script:
     - echo "prod"
   when: manual
