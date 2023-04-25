@@ -1,0 +1,13 @@
+stages:
+  - run_autotests
+
+run autotests:
+  stage: run_autotests
+  image: alpine
+  script:
+    - 
+  when: manual
+  only:
+    - main
+  tags:
+    - dev-k8s
