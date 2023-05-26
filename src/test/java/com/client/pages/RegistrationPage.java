@@ -9,6 +9,8 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationPage {
+
+
     // Selenide elements / locator / etc
     SelenideElement loginEmail = $(byName("email")),
                     password =  $(byName("password")),
@@ -20,7 +22,7 @@ public class RegistrationPage {
 
     // Actions
     public RegistrationPage openPage() {
-        open("https://client-app.remedy-dev.com/");
+        open("https://client-app-uat.remedy-dev.com/");
 
         return this;
     }
@@ -50,5 +52,11 @@ public class RegistrationPage {
         return this;
     }
 
-
+    public RegistrationPage authorization() {
+                openPage()
+                .setLogin("julia.simonova@remedylogic.com")
+                .setPassword("RLogicJLS#123")
+                .logIn();
+                return this;
+    }
 }

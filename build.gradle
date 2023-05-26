@@ -15,6 +15,7 @@ dependencies {
             "com.codeborne:selenide:6.12.4",
             "org.junit.jupiter:junit-jupiter:5.9.2",
             "org.slf4j:slf4j-simple:1.7.36",
+            "com.github.javafaker:javafaker:1.0.2",
             "io.github.bonigarcia:webdrivermanager:5.1.0",
             "io.qameta.allure:allure-selenide:2.13.6")
 }
