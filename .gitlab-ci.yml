@@ -1,0 +1,41 @@
+stages:
+  - run_autotests
+
+run autotests dev:
+  stage: run_autotests
+  image: aerokube/selenoid
+  script:
+    - echo "dev"
+  when: manual
+  environment:
+    name: dev
+  only:
+    - main
+  tags:
+    - dev-k8s
+
+run autotests uat:
+  stage: run_autotests
+  image: aerokube/selenoid
+  script:
+    - echo "uat"
+  when: manual
+  environment:
+    name: uat
+  only:
+    - main
+  tags:
+    - dev-k8s
+
+run autotests prod:
+  stage: run_autotests
+  image: aerokube/selenoid
+  script:
+    - echo "prod"
+  when: manual
+  environment:
+    name: prod
+  only:
+    - main
+  tags:
+    - prod-k8s
