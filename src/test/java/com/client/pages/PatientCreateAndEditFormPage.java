@@ -19,7 +19,8 @@ public class PatientCreateAndEditFormPage {
             emailInput = $(byName("email")),
             referralInput = $(byName("referral")),
             cancelButton = $(byText("Cancel")),
-            createButton = $(byText("Create"));
+            createButton = $(byText("Create")),
+    saveButton = $(byText("Save"));
 
 
     // Actions
@@ -75,6 +76,12 @@ public class PatientCreateAndEditFormPage {
 
     public PatientCreateAndEditFormPage clickCreate() {
         createButton.click();
+
+        return this;
+    }
+
+    public PatientCreateAndEditFormPage clickSave() {
+        saveButton.click();
 
         return this;
     }

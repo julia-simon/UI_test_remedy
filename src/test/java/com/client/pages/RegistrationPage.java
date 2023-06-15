@@ -22,7 +22,7 @@ public class RegistrationPage {
 
     // Actions
     public RegistrationPage openPage() {
-        open("https://client-app-uat.remedy-dev.com/");
+        open("https://client-app.remedy-dev.com/");
 
         return this;
     }

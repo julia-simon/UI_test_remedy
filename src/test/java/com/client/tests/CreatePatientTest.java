@@ -4,6 +4,7 @@ import com.client.pages.PatientCreateAndEditFormPage;
 import com.client.pages.PatientsListPage;
 import com.client.pages.RegistrationPage;
 import com.codeborne.selenide.SelenideElement;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.client.tests.TestData.*;
@@ -20,6 +21,7 @@ public class CreatePatientTest extends TestBase {
 
 
     @Test
+    @Tag("smoke")
     void createNewPatientTest() {
         registrationPage.authorization();
         patientCreateAndEditFormPage.clickPatientList()

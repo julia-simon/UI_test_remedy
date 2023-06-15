@@ -2,6 +2,7 @@ package com.client.tests;
 
 import com.client.pages.RegistrationPage;
 import com.codeborne.selenide.Condition;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selectors.byText;
@@ -14,7 +15,7 @@ public class FooterTest {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
-
+    @Tag("smoke")
     void footerInfoTest () {
         registrationPage.authorization();
         $(".style_appFooterPolicy__kt5MX").shouldHave(Condition.text("© RemedyLogic. All Rights Reserved. 2023"));
