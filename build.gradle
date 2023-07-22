@@ -11,13 +11,14 @@ repositories {
 }
 
 dependencies {
-    testImplementation (
+    testImplementation(
             "com.codeborne:selenide:6.12.4",
             "org.junit.jupiter:junit-jupiter:5.9.2",
             "org.slf4j:slf4j-simple:1.7.36",
             "com.github.javafaker:javafaker:1.0.2",
             "io.github.bonigarcia:webdrivermanager:5.1.0",
-            "io.qameta.allure:allure-selenide:2.13.6")
+            "io.qameta.allure:allure-selenide:2.13.6",
+            'org.aeonbits.owner:owner-java8:1.0.12')
 }
 
 test {
@@ -35,6 +36,10 @@ allure {
                 adapterVersion.set("2.13.6") //версия Allure JUnit5 (https://github.com/allure-framework/allure-java)
             }
         }
+    }
+
+    tasks.withType(Test) {
+        systemProperties(System.getProperties())
     }
 
     tasks.withType(JavaCompile) {

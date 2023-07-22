@@ -15,7 +15,8 @@ public class RegistrationPage {
     SelenideElement loginEmail = $(byName("email")),
                     password =  $(byName("password")),
                     buttonLogin =  $(byText("Log in")),
-                    titleLogin =  $(".style_secRegistrationSubtitle__FbBQD");
+                    titleLogin =  $(".style_secRegistrationSubtitle__FbBQD"),
+                    errorMessage = $(".ant-notification-topRight");
 
 
 
@@ -52,11 +53,9 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage authorization() {
-                openPage()
-                .setLogin("julia.simonova@remedylogic.com")
-                .setPassword("RLogicJLS#123")
-                .logIn();
-                return this;
+    public RegistrationPage popupErrorMessage (String value) {
+        errorMessage.shouldHave(text(value));
+
+        return this;
     }
 }

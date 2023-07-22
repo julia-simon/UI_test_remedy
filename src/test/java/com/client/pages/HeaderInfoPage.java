@@ -5,7 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
-public class HeaderInfo {
+public class HeaderInfoPage {
     // Selenide elements / locator / etc
     SelenideElement userName = $(".style_headerInfoName__ZmQl8"),
             headerInfoDown = $(".style_headerInfoDown__525aZ"),
@@ -14,19 +14,19 @@ public class HeaderInfo {
 
 
     // Actions
-    public HeaderInfo checkUserName(String value) {
+    public HeaderInfoPage checkUserName(String value) {
         userName.shouldHave(text(value));
 
         return this;
     }
 
-    public HeaderInfo menuSetting() {
+    public HeaderInfoPage menuSetting() {
         headerInfoDown.click();
 
         return this;
     }
 
-    public HeaderInfo logOutUser() {
+    public HeaderInfoPage logOutUser() {
         logOut.click();
 
         return this;

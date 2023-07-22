@@ -13,6 +13,8 @@ public class PatientCreateAndEditFormPage {
     // Selenide elements / locator / etc
     SelenideElement patientListButton = $(byText("Patients")),
             newPatientCreateButton = $(byText("Create patient")),
+            patientMenu = $("button.style_caseTableAction__GjXvp"),
+            editPatientButton = $(byText("Edit")),
             firstNameInput = $(byName("firstName")),
             lastNameInput = $(byName("lastName")),
             telNumberInput = $(byName("telNumber")),
@@ -20,13 +22,24 @@ public class PatientCreateAndEditFormPage {
             referralInput = $(byName("referral")),
             cancelButton = $(byText("Cancel")),
             createButton = $(byText("Create")),
-    saveButton = $(byText("Save"));
-
+            saveButton = $(byText("Save"));
 
     // Actions
 
     public PatientCreateAndEditFormPage clickPatientList() {
         patientListButton.click();
+
+        return this;
+    }
+
+    public PatientCreateAndEditFormPage openPatientMenu() {
+      patientMenu.click();
+
+      return this;
+    }
+
+    public PatientCreateAndEditFormPage clickEditPatientButton() {
+        editPatientButton.click();
 
         return this;
     }

@@ -9,8 +9,8 @@ public class TestData {
             lastName = faker.name().lastName(),
             email = faker.internet().emailAddress(),
             mobileNumber = faker.phoneNumber().subscriberNumber(10),
-            referralName = faker.name().fullName();
-
+            referralName = faker.name().fullName(),
+            noteMassage = faker.lordOfTheRings().toString();
 
 
 }
