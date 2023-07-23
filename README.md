@@ -19,7 +19,7 @@
 
 
 <a id="tools"></a>
-## :computer: Stack of technologies
+## :computer: Стек технологий
 
 <p  align="center">
 
@@ -121,4 +121,4 @@ smoke_test
   <img title="Selenoid Video" src="media/video/test.gif">
 </p>
 
-[Вернуться к оглавлению ⬆](#Ссылка)
+
