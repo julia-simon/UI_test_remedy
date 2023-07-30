@@ -7,10 +7,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class PatientCreateAndEditFormPage {
-
     PatientsListPage patientsListPage = new PatientsListPage();
-
-    // Selenide elements / locator / etc
     SelenideElement patientListButton = $(byText("Patients")),
             newPatientCreateButton = $(byText("Create patient")),
             patientMenu = $("button.style_caseTableAction__GjXvp"),
@@ -24,8 +21,6 @@ public class PatientCreateAndEditFormPage {
             createButton = $(byText("Create")),
             saveButton = $(byText("Save"));
 
-    // Actions
-
     public PatientCreateAndEditFormPage clickPatientList() {
         patientListButton.click();
 
@@ -33,9 +28,9 @@ public class PatientCreateAndEditFormPage {
     }
 
     public PatientCreateAndEditFormPage openPatientMenu() {
-      patientMenu.click();
+        patientMenu.click();
 
-      return this;
+        return this;
     }
 
     public PatientCreateAndEditFormPage clickEditPatientButton() {
@@ -74,7 +69,6 @@ public class PatientCreateAndEditFormPage {
         return this;
     }
 
-
     public PatientCreateAndEditFormPage setReferral(String value) {
         referralInput.setValue(value);
 
@@ -98,7 +92,6 @@ public class PatientCreateAndEditFormPage {
 
         return this;
     }
-
 
     public PatientCreateAndEditFormPage verifyResult(String value) {
         patientsListPage.verifyCreating(value);

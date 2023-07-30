@@ -7,23 +7,12 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 
 public class NotesPage {
-
-    // Selenide elements / locator / etc
-    SelenideElement notesButton = $(byText("Notes")),
-            notesTextarea = $(byTagName("textarea")),
+    SelenideElement notesTextarea = $(byTagName("textarea")),
             saveButton = $(byTagAndText("button", "Save")),
             popupWindow = $(".style_ToastItemContainer__T9irP"),
             firstNoteArea = $(".CaseNotes_note__psCRS").sibling(0).$(byTagName("textarea")),
             editNotesMenu = $(byText("Edit")),
-            deleteNoteButton =  $(byText("Delete"));
-
-
-    // Actions
-    public NotesPage openNotes() {
-        notesButton.click();
-
-        return this;
-    }
+            deleteNoteButton = $(byText("Delete"));
 
     public NotesPage enterNote(String value) {
         notesTextarea.setValue(value);

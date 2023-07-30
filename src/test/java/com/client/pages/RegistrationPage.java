@@ -9,19 +9,12 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationPage {
-
-
-    // Selenide elements / locator / etc
     SelenideElement loginEmail = $(byName("email")),
-                    password =  $(byName("password")),
-                    buttonLogin =  $(byText("Log in")),
-                    titleLogin =  $(".style_secRegistrationSubtitle__FbBQD"),
-                    errorMessage = $(".ant-notification-topRight");
+            password = $(byName("password")),
+            buttonLogin = $(byText("Log in")),
+            titleLogin = $(".style_secRegistrationSubtitle__FbBQD"),
+            errorMessage = $(".ant-notification-topRight");
 
-
-
-
-    // Actions
     public RegistrationPage openPage() {
         open("https://client-app.remedy-dev.com/");
 
@@ -33,7 +26,6 @@ public class RegistrationPage {
 
         return this;
     }
-
 
     public RegistrationPage setLogin(String value) {
         loginEmail.setValue(value);
@@ -53,7 +45,7 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage popupErrorMessage (String value) {
+    public RegistrationPage popupErrorMessage(String value) {
         errorMessage.shouldHave(text(value));
 
         return this;
