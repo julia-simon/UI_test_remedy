@@ -8,11 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class PatientCreateAndEditFormPage {
     PatientsListPage patientsListPage = new PatientsListPage();
-    SelenideElement patientListButton = $(byText("Patients")),
-            newPatientCreateButton = $(byText("Create patient")),
-            patientMenu = $("button.style_caseTableAction__GjXvp"),
-            editPatientButton = $(byText("Edit")),
-            firstNameInput = $(byName("firstName")),
+    SelenideElement firstNameInput = $(byName("firstName")),
             lastNameInput = $(byName("lastName")),
             telNumberInput = $(byName("telNumber")),
             emailInput = $(byName("email")),
@@ -21,29 +17,6 @@ public class PatientCreateAndEditFormPage {
             createButton = $(byText("Create")),
             saveButton = $(byText("Save"));
 
-    public PatientCreateAndEditFormPage clickPatientList() {
-        patientListButton.click();
-
-        return this;
-    }
-
-    public PatientCreateAndEditFormPage openPatientMenu() {
-        patientMenu.click();
-
-        return this;
-    }
-
-    public PatientCreateAndEditFormPage clickEditPatientButton() {
-        editPatientButton.click();
-
-        return this;
-    }
-
-    public PatientCreateAndEditFormPage clickPatientCreateButton() {
-        newPatientCreateButton.click();
-
-        return this;
-    }
 
     public PatientCreateAndEditFormPage setFirstName(String value) {
         firstNameInput.setValue(value);
@@ -75,12 +48,6 @@ public class PatientCreateAndEditFormPage {
         return this;
     }
 
-    public PatientCreateAndEditFormPage clickCancel() {
-        cancelButton.click();
-
-        return this;
-    }
-
     public PatientCreateAndEditFormPage clickCreate() {
         createButton.click();
 
@@ -89,12 +56,6 @@ public class PatientCreateAndEditFormPage {
 
     public PatientCreateAndEditFormPage clickSave() {
         saveButton.click();
-
-        return this;
-    }
-
-    public PatientCreateAndEditFormPage verifyResult(String value) {
-        patientsListPage.verifyCreating(value);
 
         return this;
     }

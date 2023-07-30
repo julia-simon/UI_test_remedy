@@ -15,7 +15,7 @@ public class AuthorizationTests extends TestBase {
     @Test
     @Tag("smoke")
     @DisplayName("Успешная авторизация пользователя")
-    void succesFillLoginFormTest() {
+    void successfulFillLoginFormTest() {
         step("Авторизация пользователя", () -> {
             registrationPage.openPage()
                     .setLogin(emailUser)
@@ -30,7 +30,7 @@ public class AuthorizationTests extends TestBase {
     @Test
     @Tag("smoke")
     @DisplayName("Проверка ошибки при вводе неправильного пароля")
-    void unsuccessFillLoginFormTest() {
+    void unsuccessfulFillLoginFormTest() {
         step("Авторизация пользователя", () -> {
             registrationPage.openPage()
                     .setLogin(emailUser)

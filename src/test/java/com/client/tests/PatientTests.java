@@ -1,6 +1,7 @@
 package com.client.tests;
 
 import com.client.pages.PatientCreateAndEditFormPage;
+import com.client.pages.PatientsListPage;
 import com.client.pages.RegistrationPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -12,6 +13,8 @@ import static io.qameta.allure.Allure.step;
 
 public class PatientTests extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
+
+    PatientsListPage patientsListPage = new PatientsListPage();
     PatientCreateAndEditFormPage patientCreateAndEditFormPage = new PatientCreateAndEditFormPage();
 
     @Test
@@ -24,18 +27,21 @@ public class PatientTests extends TestBase {
                     .setPassword(passwordUser)
                     .logIn();
         });
+        step("Открытие формы создания пациента", () -> {
+            patientsListPage.clickPatientList()
+                    .clickPatientCreateButton();
+        });
         step("Создание нового пациента", () -> {
-            patientCreateAndEditFormPage.clickPatientList()
-                    .clickPatientCreateButton()
-                    .setFirstName(firstName)
+            patientCreateAndEditFormPage.setFirstName(firstName)
                     .setLastName(lastName)
                     .setMobileNumber(mobileNumber)
                     .setEmail(email)
                     .setReferral(referralName)
                     .clickCreate();
         });
+
         step("Проверка появление пациента в таблице", () -> {
-            patientCreateAndEditFormPage.verifyResult(firstName)
+            patientsListPage.verifyResult(firstName)
                     .verifyResult(lastName)
                     .verifyResult(email);
         });
@@ -52,7 +58,7 @@ public class PatientTests extends TestBase {
                     .logIn();
         });
         step("Открытие меню редактирование пациента", () -> {
-            patientCreateAndEditFormPage.clickPatientList()
+            patientsListPage.clickPatientList()
                     .openPatientMenu()
                     .clickEditPatientButton();
         });
@@ -64,9 +70,8 @@ public class PatientTests extends TestBase {
                     .clickSave();
         });
         step("Проверка изменений профиля пациента", () -> {
-            patientCreateAndEditFormPage.verifyResult(firstName)
-                    .verifyResult(lastName)
-                    .verifyResult(firstName);
+            patientsListPage.verifyResult(firstName)
+                    .verifyResult(lastName);
         });
     }
 }
