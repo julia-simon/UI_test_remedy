@@ -1,7 +1,4 @@
-## Автотесты для компании Remedy Logic 
-<p align="center">
-  <img src="media/remedylogo.png" alt="Remedy" width="800">
-</p>
+## Автотесты
 
 <a name="Ссылка"></a>
 ## Содержание
